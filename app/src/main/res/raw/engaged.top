@@ -3,6 +3,9 @@ topic: ~engaged()
 concept:(hello) [hello hi hey "good morning" greetings]
 
 # Replying to speech
+~hello
+u:(~hello)
+
 u:(~hello) ~hello
 
 u:(how are you {doing today} ?) I'm fine thanks
@@ -12,5 +15,10 @@ u:(what's {that} on [your the] tablet) Oh, that is my state machine.
 u:(what are you doing?) Not much
 
 u:(what can you do) I could do quite a bit, but right now I can only answer a few questions
+  u:(hello) ^rand(~hello)
 
+proposal: %mimic_proposal Say dog or elephant
+    u1: (dog) OK, I've reached the dog bookmark %dog_mimic
+    u1: (elephant) OK, I've reached the elephant bookmark %elephant_mimic
 
+    u:(hello) ^rand[hello hi "what's up" "hey there"]
